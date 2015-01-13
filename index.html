@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular page retriving over HTTP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.js"></script>
+    <script src="/js/app.js"></script>
+  </head>
+  <body>
+    <div ng-app='steven'>
+    <h2>Getting data from a back-end API</h2>
+
+      <div class="offset" ng-controller="SomeController">
+
+        <div id="repeating">
+        <h3>Data from an http call</h3>
+           <div ng-repeat="item in data">
+             <a href="#" ng-click="showDetail(item.id)">{{ item.name }}</a> ({{item.age}})
+           </div>
+        </div>
+
+        <div ng-show="detail && detail.orders && detail.orders.length > 0">
+        <h4>Orders from {{detail.name}} </h4>
+        <table id="user-order-detail">
+          <tr>
+          <th>Item Id</th>
+          <th>Item name</th>
+          <th class="item_price">Price</th>
+          </tr>
+          <tr ng-repeat = "item in detail.orders">
+            <td class="item_id" ng-bind="item.id"></td>
+            <td class="item_name" ng-bind="item.name"></td>
+            <td class="item_price" ng-bind="item.price"></td>
+          </tr>
+        </table>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>

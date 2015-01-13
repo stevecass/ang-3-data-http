@@ -1,0 +1,36 @@
+body {
+  font-family: Helvetica, Arial, Sans-serif;
+}
+input {
+	min-width: 200px;
+}
+
+p { padding-left:30px;
+}
+
+div {
+  padding:10px;
+}
+div.offset {
+  border: 1px solid gray;
+}
+div#inner {
+  border: 1px solid blue;
+  padding: 20px;
+}
+
+div.offset h3 {
+  margin-top:0;
+}
+
+span {
+  font-weight: bolder;
+}
+span.scope {
+  font-style: italic;
+}
+
+table#user-order-detail .item_price {
+  width: 100px;
+  text-align: right;
+}
