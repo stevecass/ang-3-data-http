@@ -7,19 +7,9 @@ steven.controller('SomeController', ['$scope', '$http',  function($scope, $http)
   });
 
   $scope.detail = null;
-  
 
-  $scope.showDetail = function(id) {
-    $scope.detail = null;
-    var foundItems = $scope.data.filter(function(ele) {
-      return ele.id === id;
-    });
-
-    if (foundItems.length > 0) {
-      $scope.detail = foundItems[0];
-    }
-
-    
+  $scope.showDetail = function(item) {
+    $scope.detail = item;
   }
 
 }]);
